@@ -81,7 +81,9 @@ namespace POE_Task_1
                     {
                         Gamemap.Mapcell[Gamemap.Playerguy.tiley, Gamemap.Playerguy.tilex].symbolval = " ";
 
-                        Gamemap.Mapcell[Gamemap.Playerguy.tiley - 1, Gamemap.Playerguy.tilex] = Gamemap.Playerguy;
+                        Gamemap.Mapcell[Gamemap.Playerguy.tiley, Gamemap.Playerguy.tilex] = Gamemap.Mapcell[Gamemap.Playerguy.tiley - 1, Gamemap.Playerguy.tilex];
+
+                        Gamemap.Mapcell[Gamemap.Playerguy.tiley, Gamemap.Playerguy.tilex].symbolval = " H ";
                     }
 
 
