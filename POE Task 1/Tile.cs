@@ -37,6 +37,8 @@ namespace POE_Task_1
             Gold,
             Weapon,
             Barrier,
+            MeleeWeapon,
+            RangedWeapon,
         }
         protected Tiletypes Tiletype;
 

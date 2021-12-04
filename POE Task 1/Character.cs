@@ -32,11 +32,11 @@ namespace POE_Task_1
             set { Goldpurse = value; }
         }
 
-        private List<tile> vision;
+        private tile[,] vision;
 
 
 
-        public List<tile> Vision
+        public tile[,] Vision
         {
             get { return vision; }
             set { vision = value; }
@@ -48,7 +48,7 @@ namespace POE_Task_1
             this.maxhp = maxhp;
             this.damage = damage;
 
-            vision = new List<tile>();
+            ;
         }
 
 
