@@ -6,6 +6,9 @@ namespace POE_Task_1
 {
     public class Hero : Character
     {
+        
+     
+            
         public Hero(int tilex, int tiley, string symbolval, Tiletypes tiletype, int hp, int maxhp, int damage) : base(tilex, tiley, symbolval, tiletype, hp, maxhp, damage)
         {
             goldpurse = 0;

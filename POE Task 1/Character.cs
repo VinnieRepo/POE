@@ -33,6 +33,7 @@ namespace POE_Task_1
         }
 
         private tile[,] vision;
+        
 
 
 
@@ -105,7 +106,7 @@ namespace POE_Task_1
         public abstract Movement returnmove(Movement move = 0);
 
 
-        //Tostring to be overridden.
+        
         public abstract override string ToString();
         // Task 2 Pickup Item Class
         public void pickupitem(char i)
@@ -115,6 +116,11 @@ namespace POE_Task_1
                 Random GoldAmount = new Random();
                 int amount = GoldAmount.Next(1, 100);
                 goldpurse = goldpurse + amount;
+            }
+            
+            else if (i == '1')
+            {
+             
             }
         }
     }

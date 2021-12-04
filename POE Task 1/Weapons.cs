@@ -4,7 +4,7 @@ using System.Text;
 
 namespace POE_Task_1
 {
-    abstract class Weapon : Item
+    public abstract class Weapon : Item
     {
         protected int damage;
         public int Damage

@@ -4,9 +4,9 @@ using System.Text;
 
 namespace POE_Task_1
 {
-    class Shop
+     public class Shop
     {
-        Weapon[] weaponlist = new Weapon[3];
+        public Weapon[] weaponlist = new Weapon[3];
         Random r = new Random();
         Hero buyer;
         public Shop(Hero target)
@@ -15,7 +15,7 @@ namespace POE_Task_1
             randomWeapon();
         }
 
-        public void randomWeapon()
+        private void randomWeapon()
         {
             for (int i = 0; i < weaponlist.Length; i++)
             {
@@ -35,20 +35,22 @@ namespace POE_Task_1
 
             }
         }
-        public void Weapons(int num)
+
+        public bool CanBuy(int place)
         {
-            int weaponType = r.Next(0, 2);
-            
-            if (weaponType == 0)
+            if (buyer.goldpurse >= weaponlist[place].Cost)
             {
-                int meleeType = r.Next(0, 2);
-                weaponlist[num] = new MeleeWeapon(0, 0, tile.Tiletypes.MeleeWeapon, meleeType);
+                return true;
             }
             else
             {
-                int rangeType = r.Next(0, 2);
-                weaponlist[num] = new RangedWeapons(0, 0, tile.Tiletypes.RangedWeapon, rangeType);
+                return false;
             }
+        }
+
+        public string displayWeapon(int num)
+        {
+            return "Weapon:  " + weaponlist[num].WeaponString + " " + weaponlist[num].Cost + " Gold";
         }
     }
 }

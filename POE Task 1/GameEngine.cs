@@ -13,10 +13,19 @@ namespace POE_Task_1
             get { return gamemap; }
             set { gamemap = value; }
         }
+        private Shop gameshop;
 
+        public Shop Gameshop
+        {
+            get { return gameshop; }
+            set { gameshop = value; }
+        }
+
+     
         public GameEngine()
         {
             Gamemap = new Map(5, 10, 10, 10, 10, 5);
+            Gameshop = new Shop(Gamemap.Playerguy);
         }
         //Enemy Move in game design.
         public void Enemymove()
