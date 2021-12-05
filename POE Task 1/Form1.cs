@@ -195,6 +195,7 @@ namespace POE_Task_1
             {
                 Buy1.Enabled = false;
             }
+            Start.Gamemap.Playerguy.goldpurse = Start.Gamemap.Playerguy.goldpurse - Start.Gameshop.weaponlist[0].Cost;
 
             showweapons();
 
@@ -221,7 +222,7 @@ namespace POE_Task_1
             {
                 Buy2.Enabled = false;
             }
-            
+            Start.Gamemap.Playerguy.goldpurse = Start.Gamemap.Playerguy.goldpurse - Start.Gameshop.weaponlist[1].Cost;
             showweapons();
         }
 
@@ -246,7 +247,7 @@ namespace POE_Task_1
             {
                 Buy3.Enabled = false;
             }
-
+            Start.Gamemap.Playerguy.goldpurse = Start.Gamemap.Playerguy.goldpurse - Start.Gameshop.weaponlist[2].Cost;
             showweapons();
         }
     }
