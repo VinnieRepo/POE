@@ -33,7 +33,12 @@ namespace POE_Task_1
         }
 
         private tile[,] vision;
-        
+        protected Weapon WeaponEquip;
+        public Weapon weaponequip
+        {
+            get { return WeaponEquip; }
+            set { WeaponEquip = value; }
+        }
 
 
 

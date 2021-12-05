@@ -50,8 +50,11 @@ namespace POE_Task_1
 
         public string displayWeapon(int num)
         {
-            return "Weapon:  " + weaponlist[num].WeaponString + " " + weaponlist[num].Cost + " Gold";
+            return "Weapon:  " + weaponlist[num].WeaponString + " " + weaponlist[num].Cost + "Cost";
         }
+
+
+        
     }
 }
 

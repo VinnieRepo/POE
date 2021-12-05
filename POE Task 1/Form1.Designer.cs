@@ -40,12 +40,20 @@ namespace POE_Task_1
             this.MapHolderBox = new System.Windows.Forms.TextBox();
             this.SaveButton = new System.Windows.Forms.Button();
             this.LoadButton = new System.Windows.Forms.Button();
+            this.Weapon1Label = new System.Windows.Forms.Label();
+            this.Weapon2Label = new System.Windows.Forms.Label();
+            this.WeaponLabel3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.Buy1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.Buy2 = new System.Windows.Forms.Button();
+            this.Buy3 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // CharacterLabel
             // 
             this.CharacterLabel.AutoSize = true;
-            this.CharacterLabel.Location = new System.Drawing.Point(375, 81);
+            this.CharacterLabel.Location = new System.Drawing.Point(521, 23);
             this.CharacterLabel.Name = "CharacterLabel";
             this.CharacterLabel.Size = new System.Drawing.Size(50, 20);
             this.CharacterLabel.TabIndex = 1;
@@ -54,7 +62,7 @@ namespace POE_Task_1
             // EnemyLabel
             // 
             this.EnemyLabel.AutoSize = true;
-            this.EnemyLabel.Location = new System.Drawing.Point(375, 182);
+            this.EnemyLabel.Location = new System.Drawing.Point(521, 203);
             this.EnemyLabel.Name = "EnemyLabel";
             this.EnemyLabel.Size = new System.Drawing.Size(50, 20);
             this.EnemyLabel.TabIndex = 2;
@@ -62,7 +70,7 @@ namespace POE_Task_1
             // 
             // StartButton
             // 
-            this.StartButton.Location = new System.Drawing.Point(32, 329);
+            this.StartButton.Location = new System.Drawing.Point(12, 460);
             this.StartButton.Name = "StartButton";
             this.StartButton.Size = new System.Drawing.Size(182, 59);
             this.StartButton.TabIndex = 9;
@@ -71,7 +79,7 @@ namespace POE_Task_1
             // 
             // UpButton
             // 
-            this.UpButton.Location = new System.Drawing.Point(582, 308);
+            this.UpButton.Location = new System.Drawing.Point(722, 329);
             this.UpButton.Name = "UpButton";
             this.UpButton.Size = new System.Drawing.Size(94, 29);
             this.UpButton.TabIndex = 8;
@@ -80,7 +88,7 @@ namespace POE_Task_1
             // 
             // LeftButton
             // 
-            this.LeftButton.Location = new System.Drawing.Point(479, 344);
+            this.LeftButton.Location = new System.Drawing.Point(619, 365);
             this.LeftButton.Name = "LeftButton";
             this.LeftButton.Size = new System.Drawing.Size(94, 29);
             this.LeftButton.TabIndex = 5;
@@ -90,7 +98,7 @@ namespace POE_Task_1
             // 
             // RightButton
             // 
-            this.RightButton.Location = new System.Drawing.Point(679, 344);
+            this.RightButton.Location = new System.Drawing.Point(819, 365);
             this.RightButton.Name = "RightButton";
             this.RightButton.Size = new System.Drawing.Size(94, 29);
             this.RightButton.TabIndex = 6;
@@ -100,7 +108,7 @@ namespace POE_Task_1
             // 
             // DownButton
             // 
-            this.DownButton.Location = new System.Drawing.Point(582, 390);
+            this.DownButton.Location = new System.Drawing.Point(722, 411);
             this.DownButton.Name = "DownButton";
             this.DownButton.Size = new System.Drawing.Size(94, 29);
             this.DownButton.TabIndex = 7;
@@ -125,12 +133,12 @@ namespace POE_Task_1
             this.MapHolderBox.Multiline = true;
             this.MapHolderBox.Name = "MapHolderBox";
             this.MapHolderBox.ReadOnly = true;
-            this.MapHolderBox.Size = new System.Drawing.Size(287, 255);
+            this.MapHolderBox.Size = new System.Drawing.Size(382, 371);
             this.MapHolderBox.TabIndex = 10;
             // 
             // SaveButton
             // 
-            this.SaveButton.Location = new System.Drawing.Point(550, 52);
+            this.SaveButton.Location = new System.Drawing.Point(851, 52);
             this.SaveButton.Name = "SaveButton";
             this.SaveButton.Size = new System.Drawing.Size(126, 61);
             this.SaveButton.TabIndex = 11;
@@ -140,7 +148,7 @@ namespace POE_Task_1
             // 
             // LoadButton
             // 
-            this.LoadButton.Location = new System.Drawing.Point(550, 162);
+            this.LoadButton.Location = new System.Drawing.Point(851, 162);
             this.LoadButton.Name = "LoadButton";
             this.LoadButton.Size = new System.Drawing.Size(126, 61);
             this.LoadButton.TabIndex = 12;
@@ -148,11 +156,94 @@ namespace POE_Task_1
             this.LoadButton.UseVisualStyleBackColor = true;
             this.LoadButton.Click += new System.EventHandler(this.LoadButton_Click);
             // 
+            // Weapon1Label
+            // 
+            this.Weapon1Label.AutoSize = true;
+            this.Weapon1Label.Location = new System.Drawing.Point(499, 499);
+            this.Weapon1Label.Name = "Weapon1Label";
+            this.Weapon1Label.Size = new System.Drawing.Size(72, 20);
+            this.Weapon1Label.TabIndex = 13;
+            this.Weapon1Label.Text = "Weapon1";
+            // 
+            // Weapon2Label
+            // 
+            this.Weapon2Label.AutoSize = true;
+            this.Weapon2Label.Location = new System.Drawing.Point(677, 499);
+            this.Weapon2Label.Name = "Weapon2Label";
+            this.Weapon2Label.Size = new System.Drawing.Size(72, 20);
+            this.Weapon2Label.TabIndex = 14;
+            this.Weapon2Label.Text = "Weapon2";
+            // 
+            // WeaponLabel3
+            // 
+            this.WeaponLabel3.AutoSize = true;
+            this.WeaponLabel3.Location = new System.Drawing.Point(851, 499);
+            this.WeaponLabel3.Name = "WeaponLabel3";
+            this.WeaponLabel3.Size = new System.Drawing.Size(72, 20);
+            this.WeaponLabel3.TabIndex = 15;
+            this.WeaponLabel3.Text = "Weapon3";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(746, 460);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(47, 20);
+            this.label2.TabIndex = 16;
+            this.label2.Text = "SHOP";
+            // 
+            // Buy1
+            // 
+            this.Buy1.Location = new System.Drawing.Point(521, 560);
+            this.Buy1.Name = "Buy1";
+            this.Buy1.Size = new System.Drawing.Size(94, 29);
+            this.Buy1.TabIndex = 17;
+            this.Buy1.Text = "Buy";
+            this.Buy1.UseVisualStyleBackColor = true;
+            this.Buy1.Click += new System.EventHandler(this.Buy1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(498, 322);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(8, 8);
+            this.button2.TabIndex = 18;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // Buy2
+            // 
+            this.Buy2.Location = new System.Drawing.Point(699, 560);
+            this.Buy2.Name = "Buy2";
+            this.Buy2.Size = new System.Drawing.Size(94, 29);
+            this.Buy2.TabIndex = 19;
+            this.Buy2.Text = "Buy";
+            this.Buy2.UseVisualStyleBackColor = true;
+            this.Buy2.Click += new System.EventHandler(this.Buy2_Click);
+            // 
+            // Buy3
+            // 
+            this.Buy3.Location = new System.Drawing.Point(861, 560);
+            this.Buy3.Name = "Buy3";
+            this.Buy3.Size = new System.Drawing.Size(94, 29);
+            this.Buy3.TabIndex = 20;
+            this.Buy3.Text = "Buy";
+            this.Buy3.UseVisualStyleBackColor = true;
+            this.Buy3.Click += new System.EventHandler(this.Buy3_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1035, 656);
+            this.Controls.Add(this.Buy3);
+            this.Controls.Add(this.Buy2);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.Buy1);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.WeaponLabel3);
+            this.Controls.Add(this.Weapon2Label);
+            this.Controls.Add(this.Weapon1Label);
             this.Controls.Add(this.LoadButton);
             this.Controls.Add(this.SaveButton);
             this.Controls.Add(this.MapHolderBox);
@@ -186,6 +277,14 @@ namespace POE_Task_1
         private System.Windows.Forms.TextBox MapHolderBox;
         private System.Windows.Forms.Button SaveButton;
         private System.Windows.Forms.Button LoadButton;
+        private System.Windows.Forms.Label Weapon1Label;
+        private System.Windows.Forms.Label Weapon2Label;
+        private System.Windows.Forms.Label WeaponLabel3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button Buy1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button Buy2;
+        private System.Windows.Forms.Button Buy3;
     }
 }
 

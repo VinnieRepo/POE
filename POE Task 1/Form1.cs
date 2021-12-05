@@ -35,36 +35,56 @@ namespace POE_Task_1
 
         }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         GameEngine Start = new GameEngine();
+
+        public void showweapons()
+        {
+            Weapon1Label.Text = Start.Gameshop.displayWeapon(0);
+            Weapon2Label.Text = Start.Gameshop.displayWeapon(1);
+            WeaponLabel3.Text = Start.Gameshop.displayWeapon(2);
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
 
         private void StartButton_Click(object sender, EventArgs e)
         {
             MapHolderBox.Text = Start.Gamemap.ToString();
             CharacterLabel.Text = Start.Gamemap.Playerguy.ToString();
             EnemyLabel.Text = Start.Gamemap.enemyguy.ToString();
+            showweapons();
+            if (Start.Gamemap.Playerguy.goldpurse < Start.Gameshop.weaponlist[0].Cost)
+            {
+                Buy1.Enabled = false;
+            }
+
+            if (Start.Gamemap.Playerguy.goldpurse < Start.Gameshop.weaponlist[1].Cost)
+            {
+                Buy2.Enabled = false;
+            }
+
+            if (Start.Gamemap.Playerguy.goldpurse < Start.Gameshop.weaponlist[2].Cost)
+            {
+                Buy3.Enabled = false;
+            }
         }
 
         private void UpButton_Click(object sender, EventArgs e)
@@ -151,6 +171,83 @@ namespace POE_Task_1
             EnemyLabel.Text = Start.Gamemap.enemyguy.ToString();
 
 
+        }
+
+        private void Buy1_Click(object sender, EventArgs e)
+        {
+            Start.Gamemap.Playerguy.weaponequip = Start.Gameshop.weaponlist[1];
+            Random r = new Random(0);
+            int weaponType = r.Next(0, 2);
+
+            if (weaponType == 0)
+            {
+                int meleeType = r.Next(0, 2);
+
+                Start.Gameshop.weaponlist[0] = new MeleeWeapon(0, 0, tile.Tiletypes.MeleeWeapon, meleeType);
+            }
+            else
+            {
+                int rangeType = r.Next(0, 2);
+                Start.Gameshop.weaponlist[0] = new RangedWeapons(0, 0, tile.Tiletypes.RangedWeapon, rangeType);
+            }
+
+            if (Start.Gamemap.Playerguy.goldpurse < Start.Gameshop.weaponlist[0].Cost)
+            {
+                Buy1.Enabled = false;
+            }
+
+            showweapons();
+
+        }
+
+        private void Buy2_Click(object sender, EventArgs e)
+        {
+            Start.Gamemap.Playerguy.weaponequip = Start.Gameshop.weaponlist[1];
+            Random r = new Random(0);
+            int weaponType = r.Next(0, 2);
+            if (weaponType == 0)
+            {
+                int meleeType = r.Next(0, 2);
+
+                Start.Gameshop.weaponlist[1] = new MeleeWeapon(0, 0, tile.Tiletypes.MeleeWeapon, meleeType);
+            }
+            else
+            {
+                int rangeType = r.Next(0, 2);
+                Start.Gameshop.weaponlist[1] = new RangedWeapons(0, 0, tile.Tiletypes.RangedWeapon, rangeType);
+            }
+
+            if (Start.Gamemap.Playerguy.goldpurse < Start.Gameshop.weaponlist[1].Cost)
+            {
+                Buy2.Enabled = false;
+            }
+            
+            showweapons();
+        }
+
+        private void Buy3_Click(object sender, EventArgs e)
+        {
+            Start.Gamemap.Playerguy.weaponequip = Start.Gameshop.weaponlist[1];
+            Random r = new Random(0);
+            int weaponType = r.Next(0, 2);
+            if (weaponType == 0)
+            {
+                int meleeType = r.Next(0, 2);
+
+                Start.Gameshop.weaponlist[2] = new MeleeWeapon(0, 0, tile.Tiletypes.MeleeWeapon, meleeType);
+            }
+            else
+            {
+                int rangeType = r.Next(0, 2);
+                Start.Gameshop.weaponlist[2] = new RangedWeapons(0, 0, tile.Tiletypes.RangedWeapon, rangeType);
+            }
+
+            if (Start.Gamemap.Playerguy.goldpurse < Start.Gameshop.weaponlist[0].Cost)
+            {
+                Buy3.Enabled = false;
+            }
+
+            showweapons();
         }
     }
 }

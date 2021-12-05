@@ -120,6 +120,7 @@ namespace POE_Task_1
 
                     Hero NewHero = new Hero(Herox, Heroy, "H", Tiletype, 10, 10, 10);
                     playerguy = NewHero;
+                    playerguy.goldpurse = 3;
                     Mapcell[Herox, Heroy] = NewHero;
                     break;
 
