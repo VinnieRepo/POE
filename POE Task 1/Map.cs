@@ -53,7 +53,7 @@ namespace POE_Task_1
             get { return Enemyguy; }
             set { Enemyguy = value; }
         }
-        //Item Array and Gold for Task 2\\
+        
         private Item[] Itemholder;
         public Item[] itemholder
         {
@@ -133,15 +133,15 @@ namespace POE_Task_1
                         Enemyy = mappy.Next(0, mapheight);
                     }
 
-                    // New Randomized enemy for Task 2\\
-                    int enemtype = mappy.Next(0, 3);
+                    
+                    int enemtype = mappy.Next(0, 4);
                     if (enemtype == 2)
                     {
                         Mage NewMage = new Mage(Enemyx, Enemyy, "M", Tiletype, 15, 15, 5);
                         enemies.Add(NewMage);
                         enemyguy = NewMage;
                         Mapcell[Enemyx, Enemyy] = NewMage;
-                        enemtype = mappy.Next(1, 2);
+                        enemtype = mappy.Next(1, 4);
                     }
 
 
@@ -151,10 +151,19 @@ namespace POE_Task_1
                         enemies.Add(NewEnemy);
                         enemyguy = NewEnemy;
                         Mapcell[Enemyx, Enemyy] = NewEnemy;
-                        enemtype = mappy.Next(1, 3);
+                        enemtype = mappy.Next(1, 4);
                     }
 
-                    else enemtype = mappy.Next(1, 3);
+                    else if (enemtype == 3)
+                    {
+                        Leader NewLeader = new Leader(Enemyx, Enemyy, "L", Tiletype, 20, 20, 2);
+                        enemies.Add(NewLeader);
+                        enemyguy = NewLeader;
+                        Mapcell[Enemyx, Enemyy] = NewLeader;
+                        enemtype = mappy.Next(1, 4);
+                    }
+
+                    else enemtype = mappy.Next(1, 4);
 
 
 

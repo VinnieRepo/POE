@@ -118,10 +118,23 @@ namespace POE_Task_1
                 goldpurse = goldpurse + amount;
             }
             
-            else if (i == '1')
-            {
-             
-            }
+
+
+
         }
-    }
+
+        public int pickupweapon(int shopnum)
+        {
+            if (shopnum == 1)
+            {
+                return 1;
+            }
+            else if (shopnum == 2)
+            {
+                return 2;
+            }
+            else return 3;
+
+        }
+    } 
 }
