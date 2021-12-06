@@ -9,10 +9,12 @@ namespace POE_Task_1
         private int goldvalue;
         public int Goldvalue
         {
-            get { return goldvalue};
+            get { return goldvalue; }
+            set { goldvalue = value; }
         }
         public Goblin(int tilex, int tiley, string symbolval, Tiletypes tiletype, int hp, int maxhp, int damage) : base(tilex, tiley, symbolval, tiletype, hp, maxhp, damage)
         {
+            Goldvalue = 1;
         }
 
         //random movement

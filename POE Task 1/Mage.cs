@@ -8,10 +8,17 @@ namespace POE_Task_1
     {
         int Magex;
         int Magey;
+        private int goldvalue;
+        public int Goldvalue
+        {
+            get { return goldvalue; }
+            set { goldvalue = value; }
+        }
         public Mage(int tilex, int tiley, string symbolval, Tiletypes tiletype, int hp, int maxhp, int damage) : base(tilex, tiley, symbolval, tiletype, hp, maxhp, damage)
         {
             Magex = tilex;
             Magey = tiley;
+            Goldvalue = 5;
         }
         public override Movement returnmove(Movement move = Movement.Up)
         {

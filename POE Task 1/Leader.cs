@@ -12,12 +12,18 @@ namespace POE_Task_1
             get { return target; }
             set { target = value; } 
         }
+        private int goldvalue;
+        public int Goldvalue
+        {
+            get { return goldvalue; }
+            set { goldvalue = value; }
+        }
         Random r;
 
         public Leader(int tilex, int tiley, string symbolval, Tiletypes tiletype, int hp, int maxhp, int damage) : base(tilex, tiley, symbolval, tiletype, hp, maxhp, damage)
  
         {
-           
+            Goldvalue = 2;
             
         }
 
