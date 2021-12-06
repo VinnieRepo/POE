@@ -70,6 +70,7 @@ namespace POE_Task_1
             MapHolderBox.Text = Start.Gamemap.ToString();
             CharacterLabel.Text = Start.Gamemap.Playerguy.ToString();
             EnemyLabel.Text = Start.Gamemap.enemyguy.ToString();
+            
             showweapons();
             if (Start.Gamemap.Playerguy.goldpurse < Start.Gameshop.weaponlist[0].Cost)
             {
@@ -176,6 +177,7 @@ namespace POE_Task_1
         private void Buy1_Click(object sender, EventArgs e)
         {
             Start.Gamemap.Playerguy.weaponequip = Start.Gameshop.weaponlist[1];
+            EquippedWeapon.Text = Start.Gameshop.Equippedweapon(0);
             Random r = new Random(0);
             int weaponType = r.Next(0, 2);
 
@@ -198,12 +200,14 @@ namespace POE_Task_1
             Start.Gamemap.Playerguy.goldpurse = Start.Gamemap.Playerguy.goldpurse - Start.Gameshop.weaponlist[0].Cost;
 
             showweapons();
+            
 
         }
 
         private void Buy2_Click(object sender, EventArgs e)
         {
             Start.Gamemap.Playerguy.weaponequip = Start.Gameshop.weaponlist[1];
+            EquippedWeapon.Text = Start.Gameshop.Equippedweapon(1);
             Random r = new Random(0);
             int weaponType = r.Next(0, 2);
             if (weaponType == 0)
@@ -224,11 +228,14 @@ namespace POE_Task_1
             }
             Start.Gamemap.Playerguy.goldpurse = Start.Gamemap.Playerguy.goldpurse - Start.Gameshop.weaponlist[1].Cost;
             showweapons();
+
         }
 
         private void Buy3_Click(object sender, EventArgs e)
         {
-            Start.Gamemap.Playerguy.weaponequip = Start.Gameshop.weaponlist[1];
+            Start.Gamemap.Playerguy.weaponequip = Start.Gameshop.weaponlist[2];
+            EquippedWeapon.Text = Start.Gameshop.Equippedweapon(2);
+
             Random r = new Random(0);
             int weaponType = r.Next(0, 2);
             if (weaponType == 0)
@@ -249,6 +256,7 @@ namespace POE_Task_1
             }
             Start.Gamemap.Playerguy.goldpurse = Start.Gamemap.Playerguy.goldpurse - Start.Gameshop.weaponlist[2].Cost;
             showweapons();
+            
         }
     }
 }

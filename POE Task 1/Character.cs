@@ -24,7 +24,7 @@ namespace POE_Task_1
             get { return Damage; }
             set { Damage = value; }
         }
-        // Task 2 Gold Purse and Constuctor
+        
         private int Goldpurse;
         public int goldpurse
         {
@@ -33,6 +33,7 @@ namespace POE_Task_1
         }
 
         private tile[,] vision;
+
         protected Weapon WeaponEquip;
         public Weapon weaponequip
         {
@@ -40,7 +41,7 @@ namespace POE_Task_1
             set { WeaponEquip = value; }
         }
 
-
+        
 
         public tile[,] Vision
         {
@@ -57,6 +58,7 @@ namespace POE_Task_1
             ;
         }
 
+       
 
 
         //Position of the character.

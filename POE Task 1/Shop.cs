@@ -53,7 +53,10 @@ namespace POE_Task_1
             return "Weapon:  " + weaponlist[num].WeaponString + " " + weaponlist[num].Cost + "Cost";
         }
 
-
+        public string Equippedweapon(int num)
+        {
+            return "Weapon:  " + weaponlist[num].WeaponString + "\r\n " + "Damage: " + weaponlist[num].Damage + "\r\n"+"Durability: "+weaponlist[num];
+        }
         
     }
 }

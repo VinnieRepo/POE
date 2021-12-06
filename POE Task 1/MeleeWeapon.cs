@@ -10,6 +10,7 @@ namespace POE_Task_1
         { 
             dagger, 
             longsword, 
+            fist,
         }
         public override string ToString()
         {
@@ -41,6 +42,7 @@ namespace POE_Task_1
                     damage = 4;
                     cost = 5;
                     break;
+                
                 default:
                     break;
             }

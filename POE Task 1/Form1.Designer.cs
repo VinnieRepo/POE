@@ -48,12 +48,13 @@ namespace POE_Task_1
             this.button2 = new System.Windows.Forms.Button();
             this.Buy2 = new System.Windows.Forms.Button();
             this.Buy3 = new System.Windows.Forms.Button();
+            this.EquippedWeapon = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // CharacterLabel
             // 
             this.CharacterLabel.AutoSize = true;
-            this.CharacterLabel.Location = new System.Drawing.Point(521, 23);
+            this.CharacterLabel.Location = new System.Drawing.Point(400, 26);
             this.CharacterLabel.Name = "CharacterLabel";
             this.CharacterLabel.Size = new System.Drawing.Size(50, 20);
             this.CharacterLabel.TabIndex = 1;
@@ -62,7 +63,7 @@ namespace POE_Task_1
             // EnemyLabel
             // 
             this.EnemyLabel.AutoSize = true;
-            this.EnemyLabel.Location = new System.Drawing.Point(521, 203);
+            this.EnemyLabel.Location = new System.Drawing.Point(400, 249);
             this.EnemyLabel.Name = "EnemyLabel";
             this.EnemyLabel.Size = new System.Drawing.Size(50, 20);
             this.EnemyLabel.TabIndex = 2;
@@ -231,11 +232,21 @@ namespace POE_Task_1
             this.Buy3.UseVisualStyleBackColor = true;
             this.Buy3.Click += new System.EventHandler(this.Buy3_Click);
             // 
+            // EquippedWeapon
+            // 
+            this.EquippedWeapon.AutoSize = true;
+            this.EquippedWeapon.Location = new System.Drawing.Point(400, 182);
+            this.EquippedWeapon.Name = "EquippedWeapon";
+            this.EquippedWeapon.Size = new System.Drawing.Size(151, 20);
+            this.EquippedWeapon.TabIndex = 21;
+            this.EquippedWeapon.Text = "Current Weapon: Fists";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1035, 656);
+            this.Controls.Add(this.EquippedWeapon);
             this.Controls.Add(this.Buy3);
             this.Controls.Add(this.Buy2);
             this.Controls.Add(this.button2);
@@ -285,6 +296,7 @@ namespace POE_Task_1
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button Buy2;
         private System.Windows.Forms.Button Buy3;
+        private System.Windows.Forms.Label EquippedWeapon;
     }
 }
 
