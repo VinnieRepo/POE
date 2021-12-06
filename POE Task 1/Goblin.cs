@@ -5,7 +5,12 @@ using System.Text;
 namespace POE_Task_1
 {
     public class Goblin : Enemy
-    {    //Constructor
+    {
+        private int goldvalue;
+        public int Goldvalue
+        {
+            get { return goldvalue};
+        }
         public Goblin(int tilex, int tiley, string symbolval, Tiletypes tiletype, int hp, int maxhp, int damage) : base(tilex, tiley, symbolval, tiletype, hp, maxhp, damage)
         {
         }

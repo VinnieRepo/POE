@@ -67,6 +67,7 @@ namespace POE_Task_1
 
         private void StartButton_Click(object sender, EventArgs e)
         {
+            Start.Gamemap.Playerguy.goldpurse = 10;
             MapHolderBox.Text = Start.Gamemap.ToString();
             CharacterLabel.Text = Start.Gamemap.Playerguy.ToString();
             EnemyLabel.Text = Start.Gamemap.enemyguy.ToString();
@@ -197,6 +198,7 @@ namespace POE_Task_1
             {
                 Buy1.Enabled = false;
             }
+            CharacterLabel.Text = Start.Gamemap.Playerguy.ToString();
             Start.Gamemap.Playerguy.goldpurse = Start.Gamemap.Playerguy.goldpurse - Start.Gameshop.weaponlist[0].Cost;
 
             showweapons();
@@ -226,6 +228,7 @@ namespace POE_Task_1
             {
                 Buy2.Enabled = false;
             }
+            CharacterLabel.Text = Start.Gamemap.Playerguy.ToString();
             Start.Gamemap.Playerguy.goldpurse = Start.Gamemap.Playerguy.goldpurse - Start.Gameshop.weaponlist[1].Cost;
             showweapons();
 
@@ -254,6 +257,7 @@ namespace POE_Task_1
             {
                 Buy3.Enabled = false;
             }
+            CharacterLabel.Text = Start.Gamemap.Playerguy.ToString();
             Start.Gamemap.Playerguy.goldpurse = Start.Gamemap.Playerguy.goldpurse - Start.Gameshop.weaponlist[2].Cost;
             showweapons();
             

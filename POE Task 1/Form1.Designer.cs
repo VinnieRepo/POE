@@ -235,11 +235,11 @@ namespace POE_Task_1
             // EquippedWeapon
             // 
             this.EquippedWeapon.AutoSize = true;
-            this.EquippedWeapon.Location = new System.Drawing.Point(400, 182);
+            this.EquippedWeapon.Location = new System.Drawing.Point(400, 123);
             this.EquippedWeapon.Name = "EquippedWeapon";
-            this.EquippedWeapon.Size = new System.Drawing.Size(151, 20);
+            this.EquippedWeapon.Size = new System.Drawing.Size(41, 20);
             this.EquippedWeapon.TabIndex = 21;
-            this.EquippedWeapon.Text = "Current Weapon: Fists";
+            this.EquippedWeapon.Text = " Fists";
             // 
             // Form1
             // 

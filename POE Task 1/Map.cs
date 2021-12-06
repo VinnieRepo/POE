@@ -187,8 +187,36 @@ namespace POE_Task_1
                     gold Gold = new gold(goldx, goldy, "O", Tiletype);
                     Mapcell[goldx, goldy] = Gold;
 
+                    break;
 
+                case tile.Tiletypes.Weapon:
+                    Random r = new Random();
+                    int weaponx = mappy.Next(0, mapwidth);
+                    int weapony = mappy.Next(0, mapheight);
 
+                    while (Mapcell[weaponx, weapony].tiletype != tile.Tiletypes.Empty)
+                    {
+                        weaponx = mappy.Next(0, mapwidth);
+                        weapony = mappy.Next(0, mapheight);
+                    }
+                    int weaponType = r.Next(0, 2);
+
+                    if (weaponType == 0)
+                    {
+                        int meleeType = r.Next(0, 2);
+
+                        Weapon Placeweapon = new MeleeWeapon(0, 0, tile.Tiletypes.MeleeWeapon, meleeType);
+
+                        Mapcell[weaponx, weapony] = Placeweapon;
+                        Mapcell[weaponx, weapony].symbolval = "W";
+                    }
+                    else
+                    {
+                        int rangeType = r.Next(0, 2);
+                        Weapon Placeweapon = new RangedWeapons(0, 0, tile.Tiletypes.RangedWeapon, rangeType);
+                        Mapcell[weaponx, weapony] = Placeweapon;
+                        Mapcell[weaponx, weapony].symbolval = "W";
+                    }
 
 
 
@@ -246,6 +274,12 @@ namespace POE_Task_1
             for (int g = 0; g < Goldy; g++)
             {
                 Create(tile.Tiletypes.Gold);
+            }
+
+            for (int w = 0; w < 3; w++)
+            {
+
+                Create(tile.Tiletypes.Weapon);
             }
         }
 
